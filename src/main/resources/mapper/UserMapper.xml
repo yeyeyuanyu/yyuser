@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.yyhome.yyuser.dao.UserDao">
+
+    <select id="cheackUser" resultType="xyz.yyhome.yyuser.entity.User" parameterType="xyz.yyhome.yyuser.entity.User">
+        select * from user
+            where username=#{user.username} or email=#{user.username} and password=#{user.password}
+    </select>
+</mapper>
